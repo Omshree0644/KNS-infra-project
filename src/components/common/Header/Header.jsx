@@ -1,48 +1,68 @@
-
 import { useState } from "react";
 import "./Header.css";
 
 function Header() {
-
-  const [activeItem, setActiveItem] = useState("Overview");
-
-  const navItems = [
-    "Overview",
-    "Experience",
-    "Units",
-    "Pricing",
-    "Amenities",
-    "Location",
-  ];
+  const [activeLink, setActiveLink] = useState("overview");
 
   return (
     <header className="project-header">
 
       <button
         className="back-btn"
-        onClick={() => console.log("Back button clicked")}
-        >
+        onClick={() => window.history.back()}
+      >
         ‹ Back
-        </button>
+      </button>
 
       <nav className="header-nav">
-        {navItems.map((item) => (
-          <button
-            key={item}
-            className={activeItem === item ? "active" : ""}
-            onClick={() => setActiveItem(item)}
-          >
-            {item}
-          </button>
-        ))}
+        <a href="/#overview"
+          className={activeLink === "overview" ? "active" : ""}
+          onClick={() => setActiveLink("overview")}>
+          Overview
+        </a>
+
+        <a href="/#experience"
+          className={activeLink === "experience" ? "active" : ""}
+          onClick={() => setActiveLink("experience")}>
+          Experience
+        </a>
+
+        <a href="/#units"
+          className={activeLink === "units" ? "active" : ""}
+          onClick={() => setActiveLink("units")}>
+          Units
+        </a>
+
+        <a href="/#pricing"
+          className={activeLink === "pricing" ? "active" : ""}
+          onClick={() => setActiveLink("pricing")}>
+          Pricing
+        </a>
+
+        <a href="/#gallery"
+          className={activeLink === "gallery" ? "active" : ""}
+          onClick={() => setActiveLink("gallery")}>
+          Gallery
+        </a>
+
+        <a href="/#amenities"
+          className={activeLink === "amenities" ? "active" : ""}
+          onClick={() => setActiveLink("amenities")}>
+          Amenities
+        </a>
+
+        <a href="/#location"
+          className={activeLink === "location" ? "active" : ""}
+          onClick={() => setActiveLink("location")}>
+          Location
+        </a>
+
+       
       </nav>
 
-      <button className="call-btn"
-       onClick={() => console.log("call button clicked")}
-       >
-        
+      <a className="call-btn" href="tel:+917625065629">
         ☎ Call Now
-      </button>
+      </a>
 
     </header>
   );
