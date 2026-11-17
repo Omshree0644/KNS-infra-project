@@ -47,11 +47,15 @@ function Header() {
 
   setActiveLink(currentSection);
 
+const newHash = `#${currentSection}`;
+
+if (window.location.hash !== newHash) {
   window.history.replaceState(
     null,
     "",
-    `${window.location.pathname}#${currentSection}`
+    `${window.location.pathname}${newHash}`
   );
+}
 };
 
   window.addEventListener("scroll", updateActiveSection);
