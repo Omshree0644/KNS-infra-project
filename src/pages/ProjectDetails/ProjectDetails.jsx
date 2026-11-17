@@ -17,10 +17,9 @@ function ProjectDetails() {
 
   return (
     <>
-      <section id="overview"><Overview /></section>
+    
       <section id="overview"><Overview /></section>
       <ProjectOverview />
-      <section id="experience"><Experience /></section>
       <section id="experience"><Experience /></section>
       <section id="units"><Units /></section>
       <section id="pricing"><Pricing /></section>
