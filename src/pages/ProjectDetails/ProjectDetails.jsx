@@ -7,6 +7,7 @@ import ProjectGallery from "../../components/sections/ProjectGallery";
 import Amenities from "../../components/sections/Amenities";
 import LocationSection from "../../components/sections/LocationSection";
 import ContactSection from "../../components/sections/ContactSection";
+import ProjectOverview from "../../components/sections/ProjectOverview";
 
 
 function ProjectDetails() {
@@ -17,6 +18,9 @@ function ProjectDetails() {
   return (
     <>
       <section id="overview"><Overview /></section>
+      <section id="overview"><Overview /></section>
+      <ProjectOverview />
+      <section id="experience"><Experience /></section>
       <section id="experience"><Experience /></section>
       <section id="units"><Units /></section>
       <section id="pricing"><Pricing /></section>
