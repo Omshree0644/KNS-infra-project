@@ -1,69 +1,109 @@
-import { useState } from "react";
+
+import { useState, useEffect,  } from "react";
 import "./Header.css";
 
 function Header() {
   const [activeLink, setActiveLink] = useState("overview");
+  const [menuOpen, setMenuOpen] = useState(false);
+ 
+
+  const links = [
+    ["overview", "Overview"],
+    ["experience", "Experience"],
+    ["units", "Units"],
+    ["pricing", "Pricing"],
+    ["gallery", "Gallery"],
+    ["amenities", "Amenities"],
+    ["location", "Location"],
+    
+  ];
+
+ useEffect(() => {
+  const sectionIds = [
+    ...links.map(([id]) => id),
+    "contact",
+  ];
+
+  const updateActiveSection = () => {
+  let currentSection = "overview";
+  const scrollPosition = window.innerHeight * 0.35;
+
+  sectionIds.forEach((id) => {
+    const section = document.getElementById(id);
+
+    if (section && section.getBoundingClientRect().top <= scrollPosition) {
+      currentSection = id;
+    }
+  });
+
+  // Detect when the visitor reaches the bottom of the page
+  const isAtBottom =
+    window.innerHeight + window.scrollY >=
+    document.documentElement.scrollHeight - 5;
+
+  if (isAtBottom) {
+    currentSection = "contact";
+  }
+
+  setActiveLink(currentSection);
+
+  window.history.replaceState(
+    null,
+    "",
+    `${window.location.pathname}#${currentSection}`
+  );
+};
+
+  window.addEventListener("scroll", updateActiveSection);
+  updateActiveSection();
+
+  return () => {
+    window.removeEventListener("scroll", updateActiveSection);
+  };
+}, []);
 
   return (
     <header className="project-header">
-
       <button
         className="back-btn"
-        onClick={() => window.history.back()}
+      onClick={() => window.location.href = "/"}
       >
         ‹ Back
       </button>
 
-      <nav className="header-nav">
-        <a href="/#overview"
-          className={activeLink === "overview" ? "active" : ""}
-          onClick={() => setActiveLink("overview")}>
-          Overview
-        </a>
+      <button
+        className="menu-toggle"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle navigation menu"
+        aria-expanded={menuOpen}
+      >
+        {menuOpen ? "✕" : "☰"}
+      </button>
 
-        <a href="/#experience"
-          className={activeLink === "experience" ? "active" : ""}
-          onClick={() => setActiveLink("experience")}>
-          Experience
-        </a>
-
-        <a href="/#units"
-          className={activeLink === "units" ? "active" : ""}
-          onClick={() => setActiveLink("units")}>
-          Units
-        </a>
-
-        <a href="/#pricing"
-          className={activeLink === "pricing" ? "active" : ""}
-          onClick={() => setActiveLink("pricing")}>
-          Pricing
-        </a>
-
-        <a href="/#gallery"
-          className={activeLink === "gallery" ? "active" : ""}
-          onClick={() => setActiveLink("gallery")}>
-          Gallery
-        </a>
-
-        <a href="/#amenities"
-          className={activeLink === "amenities" ? "active" : ""}
-          onClick={() => setActiveLink("amenities")}>
-          Amenities
-        </a>
-
-        <a href="/#location"
-          className={activeLink === "location" ? "active" : ""}
-          onClick={() => setActiveLink("location")}>
-          Location
-        </a>
-
-       
+      <nav className={`header-nav ${menuOpen ? "open" : ""}`}>
+        {links.map(([id, label]) => (
+          <a
+            key={id}
+            href={`/project-details#${id}`}
+            className={activeLink === id ? "active" : ""}
+            onClick={() => {
+              setActiveLink(id);
+              setMenuOpen(false);
+            }}
+          >
+            {label}
+          </a>
+        ))}
       </nav>
-
-      <a className="call-btn" href="tel:+917625065629">
+      <a
+        className="call-btn"
+        href="#contact"
+        onClick={() => {
+          setActiveLink("contact");
+        }}
+      >
         ☎ Call Now
       </a>
-
     </header>
   );
 }

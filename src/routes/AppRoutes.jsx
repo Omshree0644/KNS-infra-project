@@ -1,25 +1,15 @@
 
-import Overview from "../components/sections/HeroSection";
-import Experience from "../components/sections/ExperienceSection";
-import Units from "../components/sections/UnitsSection";
-import Pricing from "../components/sections/PricingSection";
-import ProjectGallery from "../components/sections/ProjectGallery";
-import Amenities from "../components/sections/Amenities";
-import LocationSection from "../components/sections/LocationSection";
+import { Routes, Route } from "react-router-dom";
 
+import Projects from "../pages/Projects/Projects";
+import ProjectDetails from "../pages/ProjectDetails/ProjectDetails";
 
 function AppRoutes() {
   return (
-    <>
-      <section id="overview"><Overview /></section>
-      <section id="experience"><Experience /></section>
-      <section id="units"><Units /></section>
-      <section id="pricing"><Pricing /></section>
-      <section id="gallery"><ProjectGallery /></section>
-      <section id="amenities"><Amenities /></section>
-      <section id="location"><LocationSection /></section>
-      
-    </>
+    <Routes>
+      <Route path="/" element={<Projects />} />
+      <Route path="/project-details" element={<ProjectDetails />} />
+    </Routes>
   );
 }
 

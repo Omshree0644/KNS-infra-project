@@ -1,0 +1,29 @@
+
+.landmark-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 15px 18px;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+.landmark-card h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.landmark-card span {
+  padding: 5px 12px;
+  background-color: #c7953e;
+  color: #ffffff;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}

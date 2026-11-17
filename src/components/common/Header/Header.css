@@ -93,18 +93,69 @@
   flex-shrink: 0;
 }
 
-/* Responsive navbar */
-@media (max-width: 900px) {
+/* Hamburger button - hidden on desktop */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 25px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Mobile responsive navbar */
+@media (max-width: 768px) {
   .project-header {
-    padding: 15px 20px;
-    flex-wrap: wrap;
+    height: 65px;
+    padding: 0 16px;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+
+  .menu-toggle {
+    display: block;
+    order: 2;
+  }
+
+  .back-btn {
+    order: 1;
+    padding: 8px 14px;
+  }
+
+  .call-btn {
+    order: 3;
+    padding: 9px 13px;
+    font-size: 12px;
   }
 
   .header-nav {
-    order: 3;
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
     width: 100%;
-    overflow-x: auto;
-    justify-content: flex-start;
-    gap: 32px;
+    box-sizing: border-box;
+    background-color: #fffaf1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 10px 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  .header-nav.open {
+    display: flex;
+  }
+
+  .header-nav a {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #eee5d8;
+  }
+
+  .header-nav a.active {
+    border-bottom: 1px solid #b88727;
   }
 }

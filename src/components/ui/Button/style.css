@@ -1,0 +1,23 @@
+
+.ui-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #d8b15f, #b98732);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  white-space: nowrap;
+  transition: 0.3s ease;
+}
+
+.ui-button:hover {
+  background: #a97929;
+  transform: translateY(-2px);
+}
