@@ -1,0 +1,102 @@
+
+.hero {
+  width: 100%;
+  min-height: 680px;
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-top: -10px;
+  background-color: white;
+}
+
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding:  35px 8%;
+  text-align: center;
+  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  
+}
+
+
+
+
+.hero-logo {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+  top: 0;
+}
+
+.hero-title {
+  margin: 0;
+  color: #000;
+  font-size: 40px;
+  font-weight: 550;
+  text-align: center;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 2px;
+}
+
+.hero-tagline {
+  font-size: 12px;
+  color: #121111;
+  margin: 4px 0 0;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.4;
+  white-space: nowrap;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 0;
+}
+
+.hero-tagline strong {
+  font-weight: 700;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.property-info-cards {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 88%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  z-index: 5;
+}
+
+
+.property-info-cards p {
+  font-size: 15px;
+  font-weight:  300px;
+  color: #6c5839;
+  margin: 12px 0 0;
+  text-decoration:none;
+  cursor: pointer;
+}
+
+.property-info-cards button {
+  margin-top: 12px;
+  background: linear-gradient(135deg, #e8c779, #b88727);
+  border: none;
+  border-radius: 20px;
+  padding: 7px 16px;
+  font-size: 11px;
+  cursor: pointer;
+}

@@ -1,0 +1,96 @@
+.contact-section {
+  width: 100%;
+  padding: 38px 0;
+  background-color: #fffaf1;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.contact-section .ui-container {
+  max-width: 1400px;
+}
+
+.contact-card {
+  width: 100%;
+  max-width: 1400px;
+  min-height: 230px;
+  margin: 0 auto;
+  padding: 35px 25px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 1px solid #eee5d9;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-card h2 {
+  margin: 0 0 15px;
+  color: #171717;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.contact-card p {
+  margin: 0 0 28px;
+  color: #555;
+  font-size: 13px;
+}
+
+.contact-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.contact-buttons a {
+  min-height: 42px;
+  padding: 0 18px;
+ gap: 8px;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.contact-call {
+  color: #c18a35;
+  background-color: #fff;
+  border: 1px solid #d5a04b;
+}
+
+.contact-whatsapp {
+  color: #222;
+  background: linear-gradient(110deg, #c18a35, #f3d76d, #c18a35);
+  border: none;
+}
+
+.contact-buttons a:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 550px) {
+  .contact-section {
+    padding: 30px 15px;
+  }
+
+  .contact-card {
+    padding: 30px 15px;
+  }
+
+  .contact-card h2 {
+    font-size: 23px;
+  }
+
+  .contact-buttons {
+    gap: 12px;
+  }
+}

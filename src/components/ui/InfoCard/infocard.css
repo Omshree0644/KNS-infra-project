@@ -1,0 +1,104 @@
+
+.info-card {
+  background: #fff;
+  padding: 14px 18px;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+  min-height: 105px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 8px;
+}
+
+.info-card-title {
+  font-size: 15px;
+  font-weight: 400;
+  color: #6f6347;
+  margin: 0;
+  text-decoration: none;
+}
+
+.info-card-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+  text-decoration: none;
+}
+
+.info-card p {
+  font-size: 14px;
+  color: #b18a4a;
+  margin: 8px 0 0;
+  text-decoration: none;
+}
+
+.info-card p.card-link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.info-card button {
+  width: 100%;
+  align-self: stretch;
+  box-sizing: border-box;
+  margin-top: 8px;
+  background: linear-gradient(135deg, #e8c779, #b88727);
+  color: #333;
+  border: none;
+  border-radius: 25px;
+  padding: 9px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+/* Project Overview Card */
+
+.info-card.overview {
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 20px 12px;
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+cursor: pointer;
+}
+.info-card.overview .info-card-icon {
+  width: 42px;
+  height: 42px;
+  background: #f8efd9;
+  color: #c49342;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+.info-card.overview .info-card-title {
+  font-size: 13px;
+  color: #777;
+  font-weight: 500;
+}
+
+.info-card.overview .info-card-value {
+  font-size: 19px;
+  color: #222;
+  font-weight: 700;
+}
+.info-card.overview:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  transition: 0.3s ease;
+  background-color: #fffdf8;
+}

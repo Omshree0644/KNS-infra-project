@@ -1,0 +1,35 @@
+
+.custom-button {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  min-height: 38px;
+  padding: 0 18px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Gold button */
+.custom-button.gold {
+  background: linear-gradient(135deg, #e8c779, #b88727);
+  color: #333;
+}
+
+.custom-button.gold:hover {
+  background: #a97920;
+}
+
+/* Outline button */
+.custom-button.outline {
+  background: white;
+  color: #c49342;
+  border: 1px solid #c49342;
+}
+
+.custom-button.outline:hover {
+  background: #a97920;
+  color: white;
+}

@@ -1,0 +1,27 @@
+
+.welcome-card {
+  width: 100%;
+  min-height: 115px;
+  padding: 25px;
+  box-sizing: border-box;
+  background: linear-gradient(120deg, #d86b68, #b90000);
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.welcome-card h2 {
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.welcome-card p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.5;
+}
